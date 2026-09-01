@@ -1,0 +1,37 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#173878;color:#201b27}
+.app{max-width:520px;margin:auto;padding:18px 16px 92px;background:linear-gradient(180deg,#1e4388,#12336f);min-height:100vh}
+.top{display:flex;justify-content:space-between;align-items:center;margin:6px 0 18px;color:#fff}
+.brand{font-size:25px;font-weight:800;margin-bottom:5px}
+.top h2{margin:3px 0}.avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#f7c900;color:#432b00;font-weight:800;font-size:20px}
+.muted{color:#747070;font-size:13px}.top .muted{color:#dce7ff}
+.card{background:#fff;border-radius:18px;padding:16px;margin:12px 0;box-shadow:0 5px 20px rgba(0,0,0,.12)}
+.balance{background:#222;color:#fff}.balance .muted{color:#bbb}.money{font-size:36px;font-weight:800;margin:8px 0 16px}.stats{display:flex;justify-content:space-between;font-size:13px;color:#ddd}
+.tasks{display:grid;gap:10px}.task{display:flex;justify-content:space-between;align-items:center}.task button,.card button{border:0;border-radius:12px;padding:11px 15px;background:#222;color:#fff;font-weight:700}
+.row{display:flex;gap:8px}.row>*{width:50%}input{width:100%;padding:13px;border:1px solid #ddd;border-radius:12px;margin:5px 0 10px;font-size:15px}
+.bottom{position:fixed;bottom:0;left:0;right:0;margin:auto;max-width:520px;background:#fff;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:8px;z-index:20}.bottom button{background:none;border:0;font-size:20px}.bottom small{display:block;font-size:10px;color:#666;margin-top:2px}h3{margin:18px 2px 8px}
+
+/* Notification popup */
+.notice-overlay{position:fixed;inset:0;background:rgba(13,35,75,.72);backdrop-filter:blur(7px);display:flex;align-items:center;justify-content:center;padding:22px;z-index:9999}
+.notice-overlay.hidden{display:none}
+.notice-card{width:min(650px,100%);max-height:92vh;overflow:auto;border-radius:48px;background:linear-gradient(145deg,#ffe900,#e9c90d);border:6px solid #fff8a8;box-shadow:0 14px 35px rgba(0,0,0,.35);padding:75px 38px 38px;position:relative;text-align:center}
+.notice-icon-wrap{position:absolute;top:-55px;left:50%;transform:translateX(-50%);width:160px;height:160px;border-radius:50%;background:linear-gradient(145deg,#fffbd1,#fff);border:8px solid #fff;display:grid;place-items:center;box-shadow:0 5px 15px rgba(0,0,0,.16)}
+.notice-icon{font-size:72px;filter:drop-shadow(0 5px 4px rgba(0,0,0,.16))}
+.bell{position:absolute;right:-7px;top:-8px;width:52px;height:52px;border-radius:50%;background:#f04444;border:5px solid #fff;display:grid;place-items:center;font-size:24px}
+.notice-card h1{font-size:47px;margin:72px 0 24px;color:#5a3714;font-weight:900}
+.notice-message{background:rgba(255,247,205,.55);border:2px solid rgba(255,255,255,.8);border-radius:24px;padding:26px 25px;text-align:left;font-size:25px;line-height:1.8;font-weight:800;color:#5b3211}
+.join-title{text-align:left;font-size:23px;font-weight:900;color:#643b16;margin:32px 0 12px}
+.join-row{display:flex;align-items:center;gap:16px;text-decoration:none;color:#28202a;background:#fff5cf;border:2px solid #fff;border-radius:24px;padding:15px 17px;margin:12px 0;box-shadow:0 4px 8px rgba(124,83,0,.15)}
+.telegram-circle{flex:0 0 58px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#3d8bf2;color:#fff;font-size:31px;transform:rotate(-20deg)}
+.join-row strong{font-size:21px;flex:1;text-align:left}
+.join-btn{background:#dcecff;color:#2457c9;border:1px solid #b8d3ff;border-radius:15px;padding:10px 25px;font-size:20px;font-weight:900;box-shadow:0 2px 5px rgba(0,0,0,.08)}
+.understood{width:100%;border:5px solid #ffcb22;border-radius:25px;background:linear-gradient(#ffd83f,#ffad0d);color:#5b3211;font-size:26px;font-weight:900;padding:21px 10px;margin-top:28px;box-shadow:0 8px 0 #f79300,0 12px 18px rgba(0,0,0,.18);cursor:pointer}
+.understood:active{transform:translateY(3px);box-shadow:0 5px 0 #f79300}
+@media(max-width:480px){
+ .notice-card{border-radius:38px;padding:64px 22px 28px;border-width:5px}
+ .notice-icon-wrap{width:150px;height:150px}
+ .notice-card h1{font-size:39px;margin-top:75px}
+ .notice-message{font-size:20px;line-height:1.7;padding:22px 18px}
+ .join-title{font-size:19px}.join-row{gap:10px;padding:13px 11px}.telegram-circle{flex-basis:53px;width:53px;height:53px;font-size:27px}
+ .join-row strong{font-size:18px}.join-btn{font-size:18px;padding:9px 18px}.understood{font-size:23px}
+}
